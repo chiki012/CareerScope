@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Scope</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .field-box {
+            width: 80%;
+            margin: 10px auto;
+            padding: 15px;
+            border: 2px solid #000;
+            cursor: pointer;
+            background-color: #f8f8f8;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+            padding: 10px;
+            background-color: #eef;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Choose a Career Path</h2>
+
+    <div class="field-box" onclick="toggleDetails('science')">Science Field Scope</div>
+    <div class="details" id="science">
+        <p><strong>Scope:</strong> Science opens doors to careers in engineering, medicine, research, and technology.</p>
+        <p><strong>Pros:</strong> High salary potential, innovation-driven, global opportunities.</p>
+    </div>
+
+    <div class="field-box" onclick="toggleDetails('arts')">Arts Field Scope</div>
+    <div class="details" id="arts">
+        <p><strong>Scope:</strong> Arts leads to careers in literature, design, media, psychology, and law.</p>
+        <p><strong>Pros:</strong> Creativity-focused, diverse career choices, personal growth.</p>
+    </div>
+
+    <div class="field-box" onclick="toggleDetails('commerce')">Commerce Field Scope</div>
+    <div class="details" id="commerce">
+        <p><strong>Scope:</strong> Commerce covers business, finance, economics, and entrepreneurship.</p>
+        <p><strong>Pros:</strong> Stable career options, financial expertise, opportunities in corporate sectors.</p>
+    </div>
+
+    <script>
+        function toggleDetails(field) {
+            var details = document.getElementById(field);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
