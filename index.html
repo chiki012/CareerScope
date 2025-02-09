@@ -6,32 +6,58 @@
     <title>Career Scope</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
             padding: 20px;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: white;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
         .field-box {
-            width: 80%;
-            margin: 10px auto;
-            padding: 15px;
-            border: 2px solid #000;
+            width: 60%;
+            margin: 15px auto;
+            padding: 20px;
+            border: 2px solid white;
             cursor: pointer;
-            background-color: #f8f8f8;
-            font-size: 18px;
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 20px;
             font-weight: bold;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+        .field-box:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
         }
         .details {
             display: none;
-            margin-top: 10px;
+            width: 60%;
+            margin: 10px auto;
             text-align: left;
-            padding: 10px;
-            background-color: #eef;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+            color: #333;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-    <h2>Choose a Career Path</h2>
+    <h2>Explore Your Career Path</h2>
 
     <div class="field-box" onclick="toggleDetails('science')">Science Field Scope</div>
     <div class="details" id="science">
@@ -52,12 +78,16 @@
     </div>
 
     <script>
+        let activeField = null;
         function toggleDetails(field) {
-            var details = document.getElementById(field);
-            if (details.style.display === "none" || details.style.display === "") {
-                details.style.display = "block";
+            if (activeField) {
+                document.getElementById(activeField).style.display = "none";
+            }
+            if (activeField !== field) {
+                document.getElementById(field).style.display = "block";
+                activeField = field;
             } else {
-                details.style.display = "none";
+                activeField = null;
             }
         }
     </script>
