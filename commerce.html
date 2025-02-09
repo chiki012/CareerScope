@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce Careers</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: white;
+            position: relative;
+        }
+
+        .back-btn {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            background: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            z-index: 10;
+        }
+
+        .top-image {
+            width: 100%;
+            max-width: 1200px;
+            height: 300px;
+            object-fit: cover;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .career-box {
+            display: block;
+            width: 60%;
+            margin: 15px auto;
+            padding: 10px;
+            border: 2px solid white;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            color: white;
+            cursor: pointer;
+        }
+
+        .career-box:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .details {
+            display: none;
+            width: 80%;
+            margin: 10px auto;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            color: #333;
+        }
+
+        .details p {
+            width: 100%;
+            text-align: left;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-btn">←</a>
+    <img src="./video_commerce.gif" alt="Commerce Careers" class="top-image">
+    <h2>वाणिज्य क्षेत्र में करियर के अवसर</h2>
+
+    <div class="career-box" onclick="toggleDetails('business-management')">
+        <h3>Business and Management</h3>
+        <div class="details" id="business-management">
+            <p><strong>BBA/BMS:</strong> यह एक लोकप्रिय स्नातक पाठ्यक्रम है जो छात्रों को प्रबंधन, नेतृत्व और व्यापार
+                संचालन में करियर के लिए तैयार करता है।</p>
+            <p><strong>MBA:</strong> एक उन्नत डिग्री जो वरिष्ठ प्रबंधन भूमिकाओं की ओर ले जाती है, जैसे कि वित्त, विपणन,
+                मानव संसाधन, और संचालन के क्षेत्र में विशेष रूप से।</p>
+            <p><strong>Entrepreneurship:</strong> अपना व्यवसाय शुरू करना या एक स्टार्टअप वातावरण में काम करना, जहाँ
+                रचनात्मकता और नेतृत्व कौशल महत्वपूर्ण होते हैं।</p>
+        </div>
+    </div>
+
+    <div class="career-box" onclick="toggleDetails('finance-accounting')">
+        <h3>Finance and Accounting</h3>
+        <div class="details" id="finance-accounting">
+            <p><strong>Chartered Accountant (CA):</strong> वित्त में सबसे प्रतिष्ठित और लोकप्रिय करियर में से एक। इसमें
+                लेखा परीक्षण, कराधान, लेखांकन और परामर्श शामिल हैं।</p>
+            <p><strong>Company Secretary (CS):</strong> एक पेशेवर जो यह सुनिश्चित करता है कि एक कंपनी कॉर्पोरेट शासन
+                मानदंडों, कानूनी अनुपालन, और व्यापार नियमों का पालन करती है।</p>
+            <p><strong>Cost and Management Accountant (CMA):</strong> व्यावसायिक खर्चों और लाभप्रदता के प्रबंधन और लागत
+                विश्लेषण में विशेषज्ञता।</p>
+            <p><strong>Financial Analyst:</strong> वित्तीय डेटा का विश्लेषण करना ताकि सूचित व्यापार निर्णय लिया जा सके,
+                जैसे निवेश बैंकिंग, संपत्ति प्रबंधन, या कॉर्पोरेट वित्त में काम करना।</p>
+            <p><strong>Actuarial Science:</strong> यह एक जोखिम प्रबंधन करियर है, जहाँ आप वित्तीय जोखिमों का विश्लेषण
+                करने के लिए गणितीय और सांख्यिकीय विधियों का उपयोग करते हैं, जो मुख्य रूप से बीमा क्षेत्र में होते हैं।
+            </p>
+        </div>
+    </div>
+
+    <div class="career-box" onclick="toggleDetails('banking-insurance')">
+        <h3>Banking and Insurance</h3>
+        <div class="details" id="banking-insurance">
+            <p><strong>Banking (PO or Clerk):</strong> वाणिज्यिक, निवेश, या सार्वजनिक क्षेत्र के बैंकों में विभिन्न
+                भूमिकाओं जैसे प्रोबेशनरी ऑफिसर (PO) या क्लर्क में काम करना।</p>
+            <p><strong>Insurance:</strong> बीमा उद्योग में करियर, जैसे बीमा सलाहकार, प्रबंधक, या ऐक्टुआरी, जीवन,
+                स्वास्थ्य या सामान्य बीमा में सेवाएँ प्रदान करना।</p>
+        </div>
+    </div>
+
+    <div class="career-box" onclick="toggleDetails('economics-research')">
+        <h3>Economics and Research</h3>
+        <div class="details" id="economics-research">
+            <p><strong>Economist:</strong> आर्थिक विश्लेषण में विशेषज्ञता और सरकार, थिंक टैंक्स, या वित्तीय संस्थानों के
+                साथ काम करना ताकि आर्थिक प्रवृत्तियों का अनुमान लगाया जा सके और नीति निर्णयों को सूचित किया जा सके।</p>
+            <p><strong>Economic Analyst/Researcher:</strong> व्यवसायों, सरकारी एजेंसियों, या अंतरराष्ट्रीय संगठनों के
+                लिए अर्थशास्त्र, वित्त, या बाजार व्यवहार में अनुसंधान करना।</p>
+        </div>
+    </div>
+
+    <div class="career-box" onclick="toggleDetails('law')">
+        <h3>Law and Legal Studies</h3>
+        <div class="details" id="law">
+            <p><strong>Law:</strong> पांच साल के एकीकृत कानून डिग्री (BA LLB) को प्राप्त करना और एक वकील बनना, जिसमें
+                कॉर्पोरेट, अपराध, नागरिक, या अंतर्राष्ट्रीय कानून में विशेषज्ञता प्राप्त करने का विकल्प होता है।</p>
+            <p><strong>Corporate Law:</strong> व्यापार लेन-देन, विलय और अधिग्रहण के कानूनी पहलुओं में विशेषज्ञता, कानून
+                फर्मों या कंपनियों में काम करना।</p>
+            <p><strong>Intellectual Property Rights (IPR):</strong> पेटेंट, कॉपीराइट, ट्रेडमार्क, और अन्य बौद्धिक
+                संपत्ति संरक्षण रूपों पर ध्यान केंद्रित करना।</p>
+        </div>
+    </div>
+
+    <div class="career-box" onclick="toggleDetails('marketing-sales')">
+        <h3>Marketing and Sales</h3>
+        <div class="details" id="marketing-sales">
+            <p><strong>Marketing Management:</strong> उत्पादों या सेवाओं को बढ़ावा देने के लिए रणनीतियाँ विकसित करना,
+                जिसमें ब्रांड प्रबंधन, विज्ञापन, और डिजिटल मार्केटिंग में भूमिकाएँ होती हैं।</p>
+            <p><strong>Sales Management:</strong> विभिन्न उद्योगों में कंपनियों के लिए बिक्री टीमों और रणनीतियों की
+                देखरेख करना, खुदरा से लेकर प्रौद्योगिकी तक।</p>
+        </div>
+    </div>
+
+    <div class="career-box" onclick="toggleDetails('hospitality-tourism')">
+        <h3>Hospitality and Tourism Management</h3>
+        <div class="details" id="hospitality-tourism">
+            <p><strong>Hotel Management:</strong> होटल संचालन, अतिथि सेवाएँ, कार्यक्रम योजना, और आतिथ्य उद्योग के अन्य
+                पहलुओं का प्रबंधन करना।</p>
+            <p><strong>Tourism Management:</strong> यात्रा उद्योग में काम करना, पर्यटन स्थलों को बढ़ावा देना, और यात्रा
+                योजनाओं, पर्यटन, और कार्यक्रमों का प्रबंधन करना।</p>
+        </div>
+    </div>
+
+
+    <script>
+        let activeField = null;
+
+        function toggleDetails(field) {
+            if (activeField) {
+                document.getElementById(activeField).style.display = "none";
+            }
+            if (activeField !== field) {
+                document.getElementById(field).style.display = "block";
+                activeField = field;
+            } else {
+                activeField = null;
+            }
+        }
+    </script>
+</body>
+
+</html>
